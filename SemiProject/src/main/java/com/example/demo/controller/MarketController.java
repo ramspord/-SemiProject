@@ -19,6 +19,13 @@ public class MarketController {
 		return "marketMain";		
 	}
 	
+	//마이페이지에서 주문내역으로 이동시 
+	@RequestMapping("myOrder")	
+	public String myOrder() {		
+		System.out.println("주문내역 출력 ");
+		return "myOrder";		
+	}
+	
 	//건식 사료 페이지 
 	@RequestMapping("marketDryFeed")	
 	public String marketDryFeed() {		

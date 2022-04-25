@@ -97,7 +97,7 @@ public class MemberController {
 	@RequestMapping("myPage")
 	public String myPage() {		
 		
-		System.out.println("마이 페이지 + 주문내역 페이지 ");
+		System.out.println("카트에 담은 목록 페이지 ");
 		
 		return "myPage";		
 	}

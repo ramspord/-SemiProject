@@ -19,7 +19,7 @@
                             
                             <div class="sb-sidenav-menu-heading">MyPage</div> <!-- 이미지형 게시판 -->
                             
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="myOrder">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 주문내역
                             </a>

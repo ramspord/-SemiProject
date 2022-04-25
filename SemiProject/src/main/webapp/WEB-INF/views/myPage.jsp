@@ -25,9 +25,60 @@
     
     <body class="sb-nav-fixed">
         <%@include file="includes/navTop.jsp" %>
-        
+        <div id="layoutSidenav">
         <%@include file="includes/navMy.jsp" %>
 
+			<div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Cat's all 상점</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">카트 목록</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                카트에 담은 목록 
+                            </div>
+                            
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>제목</th>
+                                            <th width="10%">작성자</th>
+                                            <th width="20%">등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <%-- <c:forEach var="list" items="${board}">
+							        	<tr>
+							        		<td><c:out value="${list.no}" /></td>
+							        		<td>
+							        		<a href="viewMore?no=${list.no}">
+							        		<c:out value="${list.title}" />
+							        		</a>
+							        		</td>
+							        		<td><c:out value="${list.id}" /></td>
+							        		<td><c:out value="${list.regdate}" /></td>
+							        	</tr>
+							        </c:forEach> --%>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="btn btn-primary" >주문하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Cat's all</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+		</div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="/resources/js/scripts.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
