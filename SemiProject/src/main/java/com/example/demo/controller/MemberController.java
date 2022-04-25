@@ -112,7 +112,7 @@ public class MemberController {
 		List<MemberVO> data = memberService.myInfo(memberVO);
 		model.addAttribute("data", data);
 		
-		System.out.println("내정보수정페이지 출력");
+		System.out.println("내정보수정페이지");
 		memberService.myInfo(memberVO);
 
 		return "myInfo";		
