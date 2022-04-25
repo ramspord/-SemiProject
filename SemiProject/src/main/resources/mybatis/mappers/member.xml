@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.example.demo.dao.MemberDAO">
+
+	<select id="login" parameterType="memberVO" resultType="memberVO">
+		select * from member_catshop where id=#{id} and pw=#{pw}
+	</select>
+
+	<select id="selectAllMember" resultType="memberVO">
+		select * from member_catshop
+	</select>
+	
+	<select id="idCheck" parameterType="String" resultType="int">
+        SELECT COUNT(id) FROM member_catshop WHERE id= #{id}
+     </select>
+	
+	<insert id="insertMember" parameterType="memberVO">
+		insert into member_catshop(id,pw,name,email,nickname,phone,postcode,roadAddress,jibunAddress,detailAddress,extraAddress)
+		values(#{id},#{pw},#{name},#{email},#{nickname},#{phone},#{postcode},#{roadAddress},#{jibunAddress},#{detailAddress},#{extraAddress})
+	</insert>
+	
+	<update id="updateMemberPw" parameterType="memberVO">
+		update member_catshop set pw=#{pw} where id=#{id}
+	</update>
+	
+	<delete id="deleteMember" parameterType="String">
+		delete from member_catshop where id=#{id}
+	</delete>
+	
+	<select id="myInfo" parameterType="memberVO" resultType="memberVO">
+		select * from member_catshop where no=#{no}
+	</select>
+	
+	<update id="myInfo_update" parameterType="memberVO">
+		update member_catshop set pw=#{pw}, name=#{name}, email=#{email}, phone=#{phone}, nickname=#{nickname}, postcode=#{postcode}, roadAddress=#{roadAddress},
+		jibunAddress=#{jibunAddress}, detailAddress=#{detailAddress}, extraAddress=#{extraAddress}
+		
+		where no=#{no}
+	</update>
+	
+	<delete id="myInfo_delete" parameterType="memberVO">
+		delete from member_catshop where id=#{id}
+	</delete>
+	
+</mapper>  
