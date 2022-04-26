@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>마이 페이지</title>
+        <title>주문내역 페이지</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="/resources/css/styles.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,12 +33,12 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">마이 페이지</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">카트 목록</li>
+                            <li class="breadcrumb-item active">주문 내역</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                카트에 담은 목록 
+                                내 주문 내역 
                             </div>
                             
                             <div class="card-body">
@@ -65,7 +65,7 @@
 							        </c:forEach> --%>
                                     </tbody>
                                 </table>
-                                <a href="#" class="btn btn-primary" >주문하기</a>
+                                <a href="marketMain" class="btn btn-primary" >상점으로 돌아가기</a>
                             </div>
                         </div>
                     </div>

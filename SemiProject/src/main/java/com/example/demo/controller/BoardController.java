@@ -122,6 +122,19 @@ public class BoardController {
 		return "boardQa";		
 	}
 	
+	//마이페이지에서 내가 쓴 글로 이동시 
+	@RequestMapping("myWrite")	
+	public String myWrite() {		
+		System.out.println("내가 쓴 글 출력 ");
+		return "myWrite";		
+	}
+	
+	//마이페이지에서 내가 쓴 댓글로 이동시 
+	@RequestMapping("myReply")	
+	public String myReply() {		
+		System.out.println("내가 쓴 댓글 출력 ");
+		return "myReply";		
+	}
 }
 
 
